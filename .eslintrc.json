@@ -11,6 +11,7 @@
   },
   "plugins": ["@typescript-eslint"],
   "rules": {
-    "indent": "off"
+    "indent": "off",
+    "no-useless-constructor": "off"
   }
 }
