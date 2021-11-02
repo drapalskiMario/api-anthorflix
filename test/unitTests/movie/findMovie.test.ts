@@ -1,8 +1,8 @@
 import { FindMovie } from '../../../src/usecase/movies/service/findMovie'
 import { ErrorResponse, SuccessResponse } from '../../../src/usecase/utils/responses'
-import { mockFindMovieByIdRepository } from '../../mocks/movie/findMovieByIdRepository'
-import { mockFindMoviesRepository } from '../../mocks/movie/findMoviesRepository'
-import { mockMovie } from '../../mocks/movie/movie'
+import { mockFindMovieByIdRepository } from '../../mocks/movie/repositories/findMovieByIdRepository'
+import { mockFindMoviesRepository } from '../../mocks/movie/repositories/findMoviesRepository'
+import { mockMovie } from '../../mocks/movie/entities/movie'
 
 const makeSut = () => {
   const findMoviesRepositoryStub = mockFindMoviesRepository()

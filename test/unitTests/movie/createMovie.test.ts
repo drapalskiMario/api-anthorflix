@@ -1,9 +1,9 @@
 import { Movie } from '../../../src/entities/movie'
 import { CreateMovie } from '../../../src/usecase/movies/service/createMovie'
 import { ErrorResponse, SuccessResponse } from '../../../src/usecase/utils/responses'
-import { mockCreateMovieDto } from '../../mocks/movie/createmovieDTO'
-import { mockCreateMovieDtoValidator } from '../../mocks/movie/createMovieDtoValidator'
-import { mockCreateMovieRepository } from '../../mocks/movie/createMovieRepository'
+import { mockCreateMovieDto } from '../../mocks/movie/dtos/createMovieDto'
+import { mockCreateMovieDtoValidator } from '../../mocks/movie/validators/createMovieDtoValidator'
+import { mockCreateMovieRepository } from '../../mocks/movie/repositories/createMovieRepository'
 
 const makeSut = () => {
   const createMovieDtoValidatorStub = mockCreateMovieDtoValidator()
@@ -13,14 +13,14 @@ const makeSut = () => {
   return { sut, createMovieDtoValidatorStub, createMovieRepositoryStub }
 }
 
-describe('CreateMovie', () => {
+describe('CreateMovieService', () => {
   it('should return error if createMovieDtoValidator return error', async () => {
     const { sut, createMovieDtoValidatorStub } = makeSut()
     jest.spyOn(createMovieDtoValidatorStub, 'validate').mockImplementationOnce((): Promise<boolean> => {
       return Promise.resolve(true)
     })
     const result = await sut.create(mockCreateMovieDto)
-    expect(result).toEqual(ErrorResponse('invalid parametres'))
+    expect(result).toEqual(ErrorResponse('invalid params'))
   })
 
   it('should return error if createMovieRepositoryStub return error', async () => {

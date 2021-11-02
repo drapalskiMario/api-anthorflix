@@ -1,4 +1,4 @@
-import { CreateMovieDto } from '../../../src/usecase/movies/dtos/createMovieDto'
+import { CreateMovieDto } from '../../../../src/usecase/movies/dtos/createMovieDto'
 
 export const mockCreateMovieDto: CreateMovieDto = {
   name: 'Exterminador do Futuro',

@@ -12,7 +12,7 @@ export class CreateMovie {
   async create (createMovieDto: CreateMovieDto): Promise<Response> {
     const errorsInParameters = await this.createMovieDtoValidator.validate(createMovieDto)
     if (errorsInParameters) {
-      return ErrorResponse('invalid parametres')
+      return ErrorResponse('invalid params')
     }
     const createdMovie = await this.createMovieRepository.create(createMovieDto)
     if (!createdMovie) {
