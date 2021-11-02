@@ -1,20 +1,21 @@
 export type Movie = {
-  id: string,
-  name: string,
+  id: string
+  name: string
+  description: string
   url: string
-  comments: [{
+  comments?: [{
     authorId: string
     authorName : string
     comment: string
-    commentsResponses: {
+    commentsResponses?: [{
       authorId: string
       authorName: string
       comment: string
-    }
+    }]
   }]
-  ratings: [{
+  ratings?: [{
     authorId: string
     rating: number
   }]
-  ratingAverage: number
+  ratingAverage?: number
 }
