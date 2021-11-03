@@ -17,7 +17,7 @@ const makeSut = () => {
 describe('UpdateMovieService', () => {
   it('should returns error if updateMovieDtoValidator return error', async () => {
     const { sut, updateMovieDtoValidatorStub } = makeSut()
-    jest.spyOn(updateMovieDtoValidatorStub, 'validate').mockImplementationOnce(() => {
+    jest.spyOn(updateMovieDtoValidatorStub, 'updateValidate').mockImplementationOnce(() => {
       return Promise.resolve(true)
     })
     const result = await sut.update('valid_id', mockUpdateMovieDto)

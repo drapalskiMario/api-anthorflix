@@ -27,7 +27,7 @@ describe('DeleteMovieService', () => {
       return Promise.resolve(null)
     })
     const result = await sut.delete('valid_id')
-    expect(result).toEqual(ErrorResponse('error in film update'))
+    expect(result).toEqual(ErrorResponse('error in film delete'))
   })
 
   it('should returns success on update', async () => {

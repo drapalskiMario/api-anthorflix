@@ -3,7 +3,7 @@ import { UpdateMovieDto } from '../../../../src/usecase/movies/dtos/updateMovieD
 
 export const mockUpdateMovieDtoValidator = (): UpdateMovieDtoValidator => {
   class UpdateMovieDtoValidatorStub implements UpdateMovieDtoValidator {
-    async validate (updateMovieDto: UpdateMovieDto): Promise<boolean> {
+    async updateValidate (updateMovieDto: UpdateMovieDto): Promise<boolean> {
       return Promise.resolve(false)
     }
   }

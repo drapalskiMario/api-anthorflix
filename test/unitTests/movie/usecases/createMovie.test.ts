@@ -20,7 +20,7 @@ describe('CreateMovieService', () => {
 
   it('should return error if createMovieDtoValidator return error', async () => {
     const { sut, createMovieDtoValidatorStub } = makeSut()
-    jest.spyOn(createMovieDtoValidatorStub, 'validate').mockImplementationOnce((): Promise<boolean> => {
+    jest.spyOn(createMovieDtoValidatorStub, 'createValidate').mockImplementationOnce((): Promise<boolean> => {
       return Promise.resolve(true)
     })
     const result = await sut.create(mockCreateMovieDto)

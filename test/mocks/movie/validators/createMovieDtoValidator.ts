@@ -3,7 +3,7 @@ import { CreateMovieDto } from '../../../../src/usecase/movies/dtos/createMovieD
 
 export const mockCreateMovieDtoValidator = (): CreateMovieDtoValidator => {
   class CreateMovieDtoValidatorStub implements CreateMovieDtoValidator {
-    async validate (createMovieDto: CreateMovieDto): Promise<boolean> {
+    async createValidate (createMovieDto: CreateMovieDto): Promise<boolean> {
       return Promise.resolve(false)
     }
   }

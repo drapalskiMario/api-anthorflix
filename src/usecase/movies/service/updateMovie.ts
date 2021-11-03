@@ -12,7 +12,7 @@ export class UpdateMovie {
   ) { }
 
   async update (id: string, updateMovieDto: UpdateMovieDto): Promise<Response> {
-    const errors = await this.updateMovieDtoValidator.validate(updateMovieDto)
+    const errors = await this.updateMovieDtoValidator.updateValidate(updateMovieDto)
     if (errors) {
       return ErrorResponse('invalid params')
     }
