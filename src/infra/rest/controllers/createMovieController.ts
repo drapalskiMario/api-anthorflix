@@ -8,7 +8,8 @@ export class CreateMovieController {
     const result = await this.createMovieSerice.create(req.body)
     if (result.error) {
       res.status(400).json({ error: result.error })
+    } else {
+      res.status(201).send()
     }
-    res.status(201).send()
   }
 }
