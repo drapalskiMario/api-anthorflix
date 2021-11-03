@@ -13,9 +13,9 @@ export class DtoValidators implements CreateMovieDtoValidator, UpdateMovieDtoVal
     })
     const { error } = JoiValidator.validate(createMovieDto)
     if (error) {
-      return Promise.resolve(false)
+      return Promise.resolve(true)
     }
-    return Promise.resolve(true)
+    return Promise.resolve(false)
   }
 
   updateValidate (updateMovieDto: UpdateMovieDto): Promise<boolean> {
@@ -26,8 +26,8 @@ export class DtoValidators implements CreateMovieDtoValidator, UpdateMovieDtoVal
     })
     const { error } = JoiValidator.validate(updateMovieDto)
     if (error) {
-      return Promise.resolve(false)
+      return Promise.resolve(true)
     }
-    return Promise.resolve(true)
+    return Promise.resolve(false)
   }
 }
