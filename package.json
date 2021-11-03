@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "ts-node-dev --respawn --transpile-only src/infra/rest/server.ts",
+    "start:dev": "ts-node-dev --respawn --transpile-only src/infra/rest/server.ts",
     "test": "npx jest",
     "test:watch": "npx jest --watchAll --coverage=false"
   },
