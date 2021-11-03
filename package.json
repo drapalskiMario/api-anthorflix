@@ -4,9 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start:prod": "node dist/infra/rest/server.js",
     "start:dev": "ts-node-dev --respawn --transpile-only src/infra/rest/server.ts",
+    "build": "tsc",
     "test": "npx jest",
-    "test:watch": "npx jest --watchAll --coverage=false"
+    "test:watch": "npx jest --watchAll --coverage=false",
+    "test:cov": "npx jest --coverage"
   },
   "keywords": [],
   "author": "",
