@@ -1,7 +1,7 @@
-import { ErrorResponse, SuccessResponse } from '../../../src/usecase/utils/responses'
-import { mockFindMovieByIdRepository } from '../../mocks/movie/repositories/findMovieByIdRepository'
-import { mockDeleteMovieRepository } from '../../mocks/movie/repositories/deleteMovieRepository'
-import { DeleteMovie } from '../../../src/usecase/movies/service/deleteMovie'
+import { ErrorResponse, SuccessResponse } from '../../../../src/usecase/utils/responses'
+import { mockFindMovieByIdRepository } from '../../../mocks/movie/repositories/findMovieByIdRepository'
+import { mockDeleteMovieRepository } from '../../../mocks/movie/repositories/deleteMovieRepository'
+import { DeleteMovie } from '../../../../src/usecase/movies/service/deleteMovie'
 
 const makeSut = () => {
   const findMovieByIdRepositoryStub = mockFindMovieByIdRepository()

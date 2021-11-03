@@ -1,9 +1,9 @@
-import { UpdateMovie } from '../../../src/usecase/movies/service/updateMovie'
-import { ErrorResponse, SuccessResponse } from '../../../src/usecase/utils/responses'
-import { mockFindMovieByIdRepository } from '../../mocks/movie/repositories/findMovieByIdRepository'
-import { mockUpdateMovieDto } from '../../mocks/movie/dtos/updateMovieDto'
-import { mockUpdateMovieDtoValidator } from '../../mocks/movie/validators/updateMovieDtoValidator'
-import { mockUpdateMovieRepository } from '../../mocks/movie/repositories/updateMovieRepository'
+import { UpdateMovie } from '../../../../src/usecase/movies/service/updateMovie'
+import { ErrorResponse, SuccessResponse } from '../../../../src/usecase/utils/responses'
+import { mockFindMovieByIdRepository } from '../../../mocks/movie/repositories/findMovieByIdRepository'
+import { mockUpdateMovieDto } from '../../../mocks/movie/dtos/updateMovieDto'
+import { mockUpdateMovieDtoValidator } from '../../../mocks/movie/validators/updateMovieDtoValidator'
+import { mockUpdateMovieRepository } from '../../../mocks/movie/repositories/updateMovieRepository'
 
 const makeSut = () => {
   const updateMovieDtoValidatorStub = mockUpdateMovieDtoValidator()

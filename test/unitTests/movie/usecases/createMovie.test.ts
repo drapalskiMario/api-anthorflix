@@ -1,9 +1,9 @@
-import { Movie } from '../../../src/entities/movie'
-import { CreateMovie } from '../../../src/usecase/movies/service/createMovie'
-import { ErrorResponse, SuccessResponse } from '../../../src/usecase/utils/responses'
-import { mockCreateMovieDto } from '../../mocks/movie/dtos/createMovieDto'
-import { mockCreateMovieDtoValidator } from '../../mocks/movie/validators/createMovieDtoValidator'
-import { mockCreateMovieRepository } from '../../mocks/movie/repositories/createMovieRepository'
+import { Movie } from '../../../../src/entities/movie'
+import { CreateMovie } from '../../../../src/usecase/movies/service/createMovie'
+import { ErrorResponse, SuccessResponse } from '../../../../src/usecase/utils/responses'
+import { mockCreateMovieDto } from '../../../mocks/movie/dtos/createMovieDto'
+import { mockCreateMovieDtoValidator } from '../../../mocks/movie/validators/createMovieDtoValidator'
+import { mockCreateMovieRepository } from '../../../mocks/movie/repositories/createMovieRepository'
 
 const makeSut = () => {
   const createMovieDtoValidatorStub = mockCreateMovieDtoValidator()
@@ -14,6 +14,10 @@ const makeSut = () => {
 }
 
 describe('CreateMovieService', () => {
+  afterEach(() => {
+    jest.restoreAllMocks()
+  })
+
   it('should return error if createMovieDtoValidator return error', async () => {
     const { sut, createMovieDtoValidatorStub } = makeSut()
     jest.spyOn(createMovieDtoValidatorStub, 'validate').mockImplementationOnce((): Promise<boolean> => {
